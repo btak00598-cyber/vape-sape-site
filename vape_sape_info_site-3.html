@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#050b14">
+<title>VAPE SAPE — Информационный портал</title>
+<style>
+:root{--bg:#050b14;--panel:rgba(13,27,43,.82);--line:rgba(65,205,255,.22);--blue:#35cfff;--blue2:#167dff;--text:#edfaff;--muted:#91a9b8;--shadow:0 0 28px rgba(34,177,255,.13)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 50% -10%,#10345a 0,transparent 45%),linear-gradient(160deg,#050b14,#071522 60%,#050b14);color:var(--text);font:15px/1.6 Inter,system-ui,Arial,sans-serif;min-height:100vh}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.15;background-image:linear-gradient(rgba(53,207,255,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(53,207,255,.08) 1px,transparent 1px);background-size:42px 42px;mask-image:linear-gradient(to bottom,black,transparent 85%)}
+.wrap{width:min(1120px,92%);margin:auto}.top{position:sticky;top:0;z-index:10;background:rgba(4,11,19,.82);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+nav{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:14px 0}.brand{font-weight:900;letter-spacing:2px;font-size:20px}.brand span{color:var(--blue);text-shadow:0 0 16px #35cfff}
+.links{display:flex;gap:20px;flex-wrap:wrap}.links a{color:var(--muted);text-decoration:none;font-size:13px}.links a:hover{color:var(--blue)}
+.hero{padding:76px 0 48px;text-align:center}.eyebrow{color:var(--blue);letter-spacing:3px;text-transform:uppercase;font-size:11px;font-weight:800}.hero h1{font-size:clamp(38px,7vw,72px);line-height:1.02;margin:15px 0;background:linear-gradient(90deg,#fff,#8be6ff,#38aaff);color:transparent;background-clip:text;text-shadow:0 0 38px rgba(53,207,255,.13)}.hero p{max-width:650px;margin:0 auto 26px;color:var(--muted)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:1px solid rgba(73,211,255,.65);border-radius:13px;padding:12px 18px;color:#00111d;background:linear-gradient(120deg,#8deaff,#28bfff);font-weight:850;text-decoration:none;box-shadow:0 0 22px rgba(53,207,255,.2);transition:.2s;cursor:pointer}.btn:hover{transform:translateY(-2px);box-shadow:0 0 30px rgba(53,207,255,.42)}.btn.secondary{background:rgba(14,40,60,.7);color:var(--text)}
+.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px;margin:28px 0 60px}.card{grid-column:span 6;background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:24px;box-shadow:var(--shadow);backdrop-filter:blur(14px);animation:rise .7s both}.card.wide{grid-column:span 12}.card h2{margin:0 0 10px;font-size:21px}.card p{color:var(--muted);margin:0 0 14px}.icon{font-size:26px;margin-bottom:12px;filter:drop-shadow(0 0 10px #35cfff)}.pill{display:inline-block;padding:5px 10px;border:1px solid var(--line);border-radius:999px;color:var(--blue);font-size:11px;letter-spacing:1px}
+.hours{display:grid;grid-template-columns:1fr auto;gap:8px;color:var(--muted);padding:8px 0;border-bottom:1px solid rgba(65,205,255,.1)}.hours b{color:var(--text)}
+form{display:grid;gap:12px}input,textarea{width:100%;border:1px solid var(--line);border-radius:12px;background:#071522;color:var(--text);padding:13px;font:inherit;outline:none}input:focus,textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(53,207,255,.1)}textarea{min-height:110px;resize:vertical}.notice{font-size:12px;color:var(--muted);margin-top:10px}
+footer{border-top:1px solid var(--line);padding:25px 0;color:var(--muted);font-size:12px;text-align:center}
+#toast{position:fixed;bottom:20px;left:50%;transform:translate(-50%,20px);opacity:0;background:#0d2639;border:1px solid var(--line);border-radius:12px;padding:12px 18px;transition:.25s;z-index:20}#toast.show{opacity:1;transform:translate(-50%,0)}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}@keyframes pulse{50%{box-shadow:0 0 38px rgba(53,207,255,.3)}}.glow{animation:pulse 3s infinite}
+@media(max-width:700px){.links{gap:10px}.links a{font-size:12px}.card{grid-column:span 12}.hero{padding-top:55px}nav{align-items:flex-start;flex-direction:column}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap"><nav>
+  <div class="brand">VAPE <span>SAPE</span></div>
+  <div class="links"><a href="#news">Новости</a><a href="#support">Поддержка</a><a href="#hours">График</a></div>
+</nav></div></header>
+<main class="wrap">
+<section class="hero">
+  <div class="eyebrow">Информационный портал</div>
+  <h1>VAPE SAPE</h1>
+  <p>Добро пожаловать на информационную страницу. Здесь собраны официальные объявления, контакты и способы связаться с командой.</p>
+  <a class="btn glow" href="https://t.me/+_KyGq9NykH5hMTEy" target="_blank" rel="noopener">✈ Открыть Telegram</a>
+</section>
+<section class="grid">
+  <article class="card" id="news">
+    <div class="icon">✈</div><span class="pill">ОФИЦИАЛЬНЫЙ КАНАЛ</span>
+    <h2>Новости и объявления</h2>
+    <p>Переходите в официальный Telegram-канал, чтобы просматривать опубликованные новости и информационные объявления.</p>
+    <a class="btn secondary" href="https://t.me/+_KyGq9NykH5hMTEy" target="_blank" rel="noopener">Подписаться на новости ↗</a>
+  </article>
+  <article class="card" id="hours">
+    <div class="icon">◷</div><h2>График работы</h2>
+    <div class="hours"><span>Понедельник — пятница</span><b>12:00–19:00</b></div>
+    <div class="hours"><span>Суббота — воскресенье</span><b>13:00–22:00</b></div>
+    <p class="notice">Время указано по местному времени. Актуальные изменения публикуются в Telegram.</p>
+  </article>
+  <article class="card wide" id="support">
+    <div class="icon">▣</div><h2>Связаться с поддержкой</h2>
+    <p>Оставьте информационное обращение. Эта демонстрационная форма не отправляет данные владельцу и не является защищённым каналом связи.</p>
+    <form id="supportForm">
+      <input id="name" maxlength="60" placeholder="Как к вам обращаться" required>
+      <input id="contact" maxlength="100" placeholder="Ваш контакт для ответа (необязательно)">
+      <textarea id="message" maxlength="1000" placeholder="Текст обращения" required></textarea>
+      <button class="btn" type="submit">Подготовить обращение</button>
+    </form>
+    <div class="notice">После нажатия текст обращения будет подготовлен для копирования. Не указывайте пароли, платёжные данные или другую конфиденциальную информацию.</div>
+  </article>
+  <article class="card wide">
+    <div class="icon">◇</div><h2>Информация о сайте</h2>
+    <p>Эта версия предназначена для новостей, справочной информации и общих обращений. В ней нет каталога никотиновой продукции, оформления заказов, оплаты или продажи возрастных товаров.</p>
+  </article>
+</section>
+</main>
+<footer><div class="wrap">© <span id="year"></span> VAPE SAPE · Информационная страница</div></footer>
+<div id="toast" role="status" aria-live="polite"></div>
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+const toast=document.getElementById('toast');
+function showToast(t){toast.textContent=t;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),2600)}
+document.getElementById('supportForm').addEventListener('submit',async e=>{
+ e.preventDefault();
+ const text=`Обращение VAPE SAPE\nИмя: ${document.getElementById('name').value}\nКонтакт: ${document.getElementById('contact').value||'не указан'}\nСообщение: ${document.getElementById('message').value}`;
+ try{await navigator.clipboard.writeText(text);showToast('Обращение скопировано. Отправьте его в официальный Telegram.')}
+ catch{showToast('Не удалось скопировать. Попробуйте ещё раз или отправьте сообщение в Telegram.')}
+});
+</script>
+</body></html>
